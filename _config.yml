@@ -16,7 +16,6 @@
 title: OwnCloud Quickstart
 email: jennifer.marandola@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Owncloud quickstart
 baseurl: "https://jmaran19.github.io" 
 url: "https://jmaran19.github.io" 
 github_username:  jekyll
