@@ -4,11 +4,15 @@ title: Administrators
 permalink: /admin/
 ---
 
+[Install the ownCloud Server](#install-the-owncloud-server)<br>
+[Configure the Server IP Address and Port](#configure-the-server-ip-address-and-port)<br>
+[Add a User to ownCloud](#add-a-user-to-owncloud)
+
 # Install the ownCloud Server
 
-The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, Web server, and PHP options. For information on system requirements, see [System Requirements](https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html).
+The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, web server, and PHP options. For information on system requirements, see [System Requirements](https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html) in the ownCloud documentation.
 
-In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see [**ownCloud Server** > **Admin Manual** > **Installation** > **Installation Options**](https://doc.owncloud.org/server/index.html).  
+In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see [Installation Options](https://doc.owncloud.org/server/administration_manual/installation/docker/index.html) in the ownCloud documentation.  
 
 1. Download the ownCloud Server tarball.
 
@@ -18,7 +22,7 @@ In this example, an ownCloud Community Edition server is installed as a single s
 
     Decompress the tarball into the appropriate directory, for example **/var/www/owncloud/**.
 
-3. Set your webserver user to be the owner of your **owncloud** directory. 
+3. Set your web server user to be the owner of your **owncloud** directory. 
 
     For example:
 
@@ -62,3 +66,13 @@ If you would like to set a specific port for users to connect on, you can set th
     Users can now connect to your server using the assigned IP address and port number. For example: `https://192.168.0.1:8080`.
 
 # Add a User to ownCloud
+
+To create a new user in ownCloud, use the ownCloud Web UI to access the user management page. 
+
+In the UI, enter the login name and initial password for the user.  
+
+![Add User](/images/owncloud_add_user.png)
+
+Login names can contain letters, numbers, dashes, underscores, periods, and at signs (@). 
+
+For more information on creating and managing user accounts, see [User Management](https://doc.owncloud.com/server/administration_manual/configuration/user/user_configuration.html) in the ownCloud documentation. 

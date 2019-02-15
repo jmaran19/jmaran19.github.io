@@ -38,11 +38,15 @@
   </header>
 
   <div class="post-content">
-    <h1 id="install-the-owncloud-server">Install the ownCloud Server</h1>
+    <p><a href="#install-the-owncloud-server">Install the ownCloud Server</a><br />
+<a href="#configure-the-server-ip-address-and-port">Configure the Server IP Address and Port</a><br />
+<a href="#add-a-user-to-owncloud">Add a User to ownCloud</a></p>
 
-<p>The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, Web server, and PHP options. For information on system requirements, see <a href="https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html">System Requirements</a>.</p>
+<h1 id="install-the-owncloud-server">Install the ownCloud Server</h1>
 
-<p>In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see <a href="https://doc.owncloud.org/server/index.html"><strong>ownCloud Server</strong> &gt; <strong>Admin Manual</strong> &gt; <strong>Installation</strong> &gt; <strong>Installation Options</strong></a>.</p>
+<p>The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, web server, and PHP options. For information on system requirements, see <a href="https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html">System Requirements</a> in the ownCloud documentation.</p>
+
+<p>In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see <a href="https://doc.owncloud.org/server/administration_manual/installation/docker/index.html">Installation Options</a> in the ownCloud documentation.</p>
 
 <ol>
   <li>
@@ -56,7 +60,7 @@
     <p>Decompress the tarball into the appropriate directory, for example <strong>/var/www/owncloud/</strong>.</p>
   </li>
   <li>
-    <p>Set your webserver user to be the owner of your <strong>owncloud</strong> directory.</p>
+    <p>Set your web server user to be the owner of your <strong>owncloud</strong> directory.</p>
 
     <p>For example:</p>
 
@@ -110,6 +114,16 @@
 </ol>
 
 <h1 id="add-a-user-to-owncloud">Add a User to ownCloud</h1>
+
+<p>To create a new user in ownCloud, use the ownCloud Web UI to access the user management page.</p>
+
+<p>In the UI, enter the login name and initial password for the user.</p>
+
+<p><img src="/images/owncloud_add_user.png" alt="Add User" /></p>
+
+<p>Login names can contain letters, numbers, dashes, underscores, periods, and at signs (@).</p>
+
+<p>For more information on creating and managing user accounts, see <a href="https://doc.owncloud.com/server/administration_manual/configuration/user/user_configuration.html">User Management</a> in the ownCloud documentation.</p>
 
   </div>
 
