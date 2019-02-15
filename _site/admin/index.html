@@ -3,22 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Install the ownCloud Server | Owncloud Quickstart</title>
+<title>Administrators | ownCloud Quickstart</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Install the ownCloud Server" />
+<meta property="og:title" content="Administrators" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/install/" />
-<meta property="og:url" content="http://localhost:4000/install/" />
-<meta property="og:site_name" content="Owncloud Quickstart" />
+<link rel="canonical" href="http://localhost:4000/admin/" />
+<meta property="og:url" content="http://localhost:4000/admin/" />
+<meta property="og:site_name" content="ownCloud Quickstart" />
 <script type="application/ld+json">
-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/install/","headline":"Install the ownCloud Server","@context":"http://schema.org"}</script>
+{"@type":"WebPage","url":"http://localhost:4000/admin/","headline":"Administrators","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Owncloud Quickstart" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="ownCloud Quickstart" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Owncloud Quickstart</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">ownCloud Quickstart</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -28,7 +26,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/install/">Install the ownCloud Server</a><a class="page-link" href="/ip_port/">Configuring the ownCloud IP Address and Port Number</a></div>
+        <div class="trigger"><a class="page-link" href="/admin/">Administrators</a><a class="page-link" href="/user/">Users</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -36,11 +34,13 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Install the ownCloud Server</h1>
+    <h1 class="post-title">Administrators</h1>
   </header>
 
   <div class="post-content">
-    <p>The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, Web server, and PHP options. For information on system requirements, see <a href="https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html">System Requirements</a>.</p>
+    <h1 id="install-the-owncloud-server">Install the ownCloud Server</h1>
+
+<p>The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, Web server, and PHP options. For information on system requirements, see <a href="https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html">System Requirements</a>.</p>
 
 <p>In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see <a href="https://doc.owncloud.org/server/index.html"><strong>ownCloud Server</strong> &gt; <strong>Admin Manual</strong> &gt; <strong>Installation</strong> &gt; <strong>Installation Options</strong></a>.</p>
 
@@ -81,6 +81,36 @@
   </li>
 </ol>
 
+<h1 id="configure-the-server-ip-address-and-port">Configure the Server IP Address and Port</h1>
+
+<p>ownCloud is served by your web server. Users can connect to your ownCloud server using the IP address and port number configured in the web server that is used by ownCloud.</p>
+
+<p>If you do not know the IP address of your web server, you can open a terminal on the server and use the <strong>ifconfig</strong> command to determine the address.</p>
+
+<p>If you would like to set a specific port for users to connect on, you can set the port value in the web server. For example, if you are using an Apache web server and you would like to change the listening port number to 8080, do the following:</p>
+
+<ol>
+  <li>
+    <p>Open your <strong>httpd.conf</strong> file in a text editor.</p>
+
+    <p>Assuming you have not changed the default value previously, look for the line with <code class="highlighter-rouge">Listen 80</code>.</p>
+  </li>
+  <li>
+    <p>Change the listen line to your desired port number.</p>
+
+    <p>For example:</p>
+
+    <p><code class="highlighter-rouge">Listen 8080</code></p>
+  </li>
+  <li>
+    <p>Save the file and restart your Apache server.</p>
+
+    <p>Users can now connect to your server using the assigned IP address and port number. For example: <code class="highlighter-rouge">https://192.168.0.1:8080</code>.</p>
+  </li>
+</ol>
+
+<h1 id="add-a-user-to-owncloud">Add a User to ownCloud</h1>
+
   </div>
 
 </article>
@@ -91,19 +121,19 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Owncloud Quickstart</h2>
+    <h2 class="footer-heading">ownCloud Quickstart</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">Owncloud Quickstart</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+          <li class="p-name">ownCloud Quickstart</li><li><a class="u-email" href="mailto:jennifer.marandola@gmail.com">jennifer.marandola@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+        <p></p>
       </div>
     </div>
 
