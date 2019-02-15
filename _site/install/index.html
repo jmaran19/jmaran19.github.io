@@ -3,17 +3,17 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Owncloud Quickstart | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>Install the ownCloud Server | Owncloud Quickstart</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Owncloud Quickstart" />
+<meta property="og:title" content="Install the ownCloud Server" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
 <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/404.html" />
-<meta property="og:url" content="http://localhost:4000/404.html" />
+<link rel="canonical" href="http://localhost:4000/install/" />
+<meta property="og:url" content="http://localhost:4000/install/" />
 <meta property="og:site_name" content="Owncloud Quickstart" />
 <script type="application/ld+json">
-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/404.html","headline":"Owncloud Quickstart","@context":"http://schema.org"}</script>
+{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/install/","headline":"Install the ownCloud Server","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Owncloud Quickstart" /></head>
 <body><header class="site-header" role="banner">
@@ -33,26 +33,57 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title">Install the ownCloud Server</h1>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="post-content">
+    <p>The ownCloud Server is deployed on a Linux server. Before you begin, be sure that your server meets all system requirements including supported database, Web server, and PHP options. For information on system requirements, see <a href="https://doc.owncloud.org/server/administration_manual/installation/system_requirements.html">System Requirements</a>.</p>
+
+<p>In this example, an ownCloud Community Edition server is installed as a single server using the command line. Other installation options are available, see <a href="https://doc.owncloud.org/server/index.html"><strong>ownCloud Server</strong> &gt; <strong>Admin Manual</strong> &gt; <strong>Installation</strong> &gt; <strong>Installation Options</strong></a>.</p>
+
+<ol>
+  <li>
+    <p>Download the ownCloud Server tarball.</p>
+
+    <p>The tarball is available from <a href="https://owncloud.org/download/#instructions-server">ownCloud Download Page</a>.</p>
+  </li>
+  <li>
+    <p>Unpack the tarball.</p>
+
+    <p>Decompress the tarball into the appropriate directory, for example <strong>/var/www/owncloud/</strong>.</p>
+  </li>
+  <li>
+    <p>Set your webserver user to be the owner of your <strong>owncloud</strong> directory.</p>
+
+    <p>For example:</p>
+
+    <p><code class="highlighter-rouge">$ sudo chown -R www-data:www-data /var/www/owncloud/</code></p>
+  </li>
+  <li>
+    <p>Use the <strong>occ</strong> command to perform the installation.</p>
+
+    <p>Execute the <strong>occ</strong> command from the root directory of the ownCloud source. For example:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd /var/www/owncloud/
+ $ sudo -u www-data php occ maintenance:install 
+     --database "mysql" --database-name "owncloud" \
+     --database-user "root" --database-pass "password" \
+     --admin-user "admin" --admin-pass "password"
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Apply permissions to your ownCloud files and directories.</p>
+
+    <p>For security purposes, you must apply the appropriate permissions to your ownCloud files and directories. For more information on this, see <a href="https://doc.owncloud.com/server/administration_manual/installation/installation_wizard.html#post-installation-steps">Post Installation Steps</a> in the ownCloud documentation.</p>
+  </li>
+</ol>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
